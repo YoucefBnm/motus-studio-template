@@ -1,41 +1,40 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "shadcn/tailwind.css";
 
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #faf8f5;
-  --foreground: #413825;
-  --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(60 1.9608% 10%);
-  --popover: #ffffff;
-  --popover-foreground: hsl(41.0526 28.3582% 13.1373%);
-  --primary: #e73b24;
-  --primary-foreground: hsl(0 0% 100%);
-  --secondary: #ece5d9;
-  --secondary-foreground: #565043;
-  --muted: hsl(37.1429 41.1765% 90%);
-  --muted-foreground: #84827c;
-  --accent: #ece5d9;
-  --accent-foreground: #2b2518;
-  --destructive: hsl(60 1.9608% 10%);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.153 0.006 107.1);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.153 0.006 107.1);
+  --primary: oklch(0.514 0.222 16.935);
+  --primary-foreground: oklch(0.969 0.015 12.422);
+  --secondary: oklch(0.967 0.001 286.375);
+  --secondary-foreground: oklch(0.21 0.006 285.885);
+  --muted: oklch(0.966 0.005 106.5);
+  --muted-foreground: oklch(0.58 0.031 107.3);
+  --accent: oklch(0.514 0.222 16.935);
+  --accent-foreground: oklch(0.969 0.015 12.422);
+  --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: hsl(0 0% 100%);
-  --border: hsl(45 10% 84.3137%);
-  --input: hsl(41.0526 11.6564% 68.0392%);
-  --ring: hsl(7.0769 80.2469% 52.3529%);
-  --chart-1: hsl(10.1087 82.1429% 43.9216%);
-  --chart-2: hsl(243.2308 100% 74.5098%);
-  --chart-3: hsl(37.8947 41.3043% 81.9608%);
-  --chart-4: hsl(248.7805 69.4915% 88.4314%);
-  --chart-5: hsl(9.8462 86.6667% 44.1176%);
-  --sidebar: hsl(43.6364 40.7407% 94.7059%);
-  --sidebar-foreground: hsl(48 4.2017% 23.3333%);
-  --sidebar-primary: hsl(7.0769 80.2469% 52.3529%);
-  --sidebar-primary-foreground: hsl(0 0% 98.4314%);
-  --sidebar-accent: hsl(37.8947 33.3333% 88.8235%);
-  --sidebar-accent-foreground: hsl(0 0% 20.3922%);
-  --sidebar-border: hsl(0 0% 92.1569%);
-  --sidebar-ring: hsl(0 0% 70.9804%);
+  --border: oklch(0.93 0.007 106.5);
+  --input: oklch(0.93 0.007 106.5);
+  --ring: oklch(0.737 0.021 106.9);
+  --chart-1: oklch(0.785 0.115 274.713);
+  --chart-2: oklch(0.585 0.233 277.117);
+  --chart-3: oklch(0.511 0.262 276.966);
+  --chart-4: oklch(0.457 0.24 277.023);
+  --chart-5: oklch(0.398 0.195 277.366);
+  --sidebar: oklch(0.988 0.003 106.5);
+  --sidebar-foreground: oklch(0.153 0.006 107.1);
+  --sidebar-primary: oklch(0.586 0.253 17.585);
+  --sidebar-primary-foreground: oklch(0.969 0.015 12.422);
+  --sidebar-accent: oklch(0.966 0.005 106.5);
+  --sidebar-accent-foreground: oklch(0.228 0.013 107.4);
+  --sidebar-border: oklch(0.93 0.007 106.5);
+  --sidebar-ring: oklch(0.737 0.021 106.9);
   --font-sans:
     ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
@@ -44,7 +43,7 @@
   --font-mono:
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
-  --radius: 0.5rem;
+  --radius: 0;
   --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
   --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.05);
   --shadow-sm:
@@ -59,41 +58,43 @@
   --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.25);
   --tracking-normal: 0em;
   --spacing: 0.25rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.153 0.006 107.1);
 }
 
 .dark {
-  --background: hsl(60 2.7027% 14.5098%);
-  --foreground: hsl(37.8947 14.2857% 73.9216%);
-  --card: hsl(60 2.7027% 14.5098%);
-  --card-foreground: hsl(42.8571 46.6667% 97.0588%);
-  --popover: hsl(60 2.1277% 18.4314%);
-  --popover-foreground: hsl(48 9.0909% 89.2157%);
-  --primary: hsl(7.0213 91.2621% 59.6078%);
-  --primary-foreground: hsl(0 0% 100%);
-  --secondary: hsl(42.8571 46.6667% 97.0588%);
-  --secondary-foreground: hsl(60 2.1277% 18.4314%);
-  --muted: hsl(60 3.8462% 10.1961%);
-  --muted-foreground: hsl(45 12.6582% 69.0196%);
-  --accent: hsl(42.8571 13.7255% 10%);
-  --accent-foreground: hsl(43.6364 40.7407% 94.7059%);
-  --destructive: hsl(352.0197 100% 60.1961%);
+  --background: oklch(0.153 0.006 107.1);
+  --foreground: oklch(0.988 0.003 106.5);
+  --card: oklch(0.228 0.013 107.4);
+  --card-foreground: oklch(0.988 0.003 106.5);
+  --popover: oklch(0.228 0.013 107.4);
+  --popover-foreground: oklch(0.988 0.003 106.5);
+  --primary: oklch(0.455 0.188 13.697);
+  --primary-foreground: oklch(0.969 0.015 12.422);
+  --secondary: oklch(0.274 0.006 286.033);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.286 0.016 107.4);
+  --muted-foreground: oklch(0.737 0.021 106.9);
+  --accent: oklch(0.455 0.188 13.697);
+  --accent-foreground: oklch(0.969 0.015 12.422);
+  --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: hsl(0 0% 100%);
-  --border: hsl(52.5 6.7797% 23.1373%);
-  --input: hsl(45 7.6923% 30.5882%);
-  --ring: hsl(7.0213 91.2621% 59.6078%);
-  --chart-1: hsl(10.1087 82.1429% 43.9216%);
-  --chart-2: hsl(243.2308 100% 74.5098%);
-  --chart-3: hsl(42.8571 13.7255% 10%);
-  --chart-4: hsl(240 35.6522% 22.549%);
-  --chart-5: hsl(9.8462 86.6667% 44.1176%);
-  --sidebar: hsl(30 3.3333% 11.7647%);
-  --sidebar-foreground: hsl(37.8947 14.2857% 73.9216%);
-  --sidebar-primary: hsl(0 0% 20.3922%);
-  --sidebar-primary-foreground: hsl(0 0% 98.4314%);
-  --sidebar-accent: hsl(40 5.8824% 10%);
-  --sidebar-accent-foreground: hsl(37.8947 14.2857% 73.9216%);
-  --sidebar-border: hsl(0 0% 92.1569%);
-  --sidebar-ring: hsl(0 0% 70.9804%);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.58 0.031 107.3);
+  --chart-1: oklch(0.785 0.115 274.713);
+  --chart-2: oklch(0.585 0.233 277.117);
+  --chart-3: oklch(0.511 0.262 276.966);
+  --chart-4: oklch(0.457 0.24 277.023);
+  --chart-5: oklch(0.398 0.195 277.366);
+  --sidebar: oklch(0.21 0.006 285.885);
+  --sidebar-foreground: oklch(0.988 0.003 106.5);
+  --sidebar-primary: oklch(0.645 0.246 16.439);
+  --sidebar-primary-foreground: oklch(0.969 0.015 12.422);
+  --sidebar-accent: oklch(0.286 0.016 107.4);
+  --sidebar-accent-foreground: oklch(0.988 0.003 106.5);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.58 0.031 107.3);
   --font-sans:
     ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
@@ -168,6 +169,10 @@
   --shadow-lg: var(--shadow-lg);
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
+  --font-heading: var(--font-sans);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
 }
 @layer base {
   * {
@@ -175,5 +180,8 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  html {
+    @apply font-sans;
   }
 }
