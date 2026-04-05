@@ -52,8 +52,7 @@ interface AnimatedMenuItemProps extends HTMLMotionProps<"div"> {
   order?: number;
   variants?: Variants;
 }
-interface AnimatedMenuButtonLabelProps
-  extends React.HTMLAttributes<HTMLDivElement> {
+interface AnimatedMenuButtonLabelProps extends React.HTMLAttributes<HTMLDivElement> {
   closeLabel?: string;
   openLabel?: string;
 }
@@ -234,6 +233,7 @@ export function CloseAnimatedMenu({
         "appearance-none bg-none outline-none border-none",
         className,
       )}
+      aria-label="close menu"
       onClick={closeMenu}
       {...props}
     />

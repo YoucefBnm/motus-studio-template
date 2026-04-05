@@ -1,7 +1,7 @@
-import { BgMask } from "@/components/bg-mask";
 import { Logo } from "@/components/logo";
 import { ArrowUpRightIcon } from "lucide-react";
 import Link from "next/link";
+import { BgMask } from "../systaliko-ui/bg-mask";
 const links = [
   {
     id: "footer-link-work",
@@ -33,8 +33,8 @@ export function Footer() {
   return (
     <footer className="bg-card-foreground text-background px-8 flex flex-col gap-8 py-12 md:grid md:grid-cols-3 md:items-start md:grid-rows-2">
       <div className="row-span-1 col-span-1 space-y-4">
-        <Logo className="w-50 text-muted-foreground" />
-        <p className="max-w-prose text-muted text-sm">
+        <Logo className="w-30 text-muted-foreground" />
+        <p className="text-balance text-muted text-sm">
           A multidisciplinary team of designers, developers, and strategists
           united by one goal, creating digital experiences that empower brands
           to stand out.
@@ -44,7 +44,7 @@ export function Footer() {
       <nav className=" row-span-2 flex flex-col">
         {links.map((item) => (
           <li key={item.id} className="border-b list-none border-b-border/40">
-            <BgMask className="after:bg-primary p-6 flex gap-2 items-center">
+            <BgMask className="p-4 flex gap-2 items-center">
               <Link
                 href={item.href}
                 title={item.label}
@@ -59,7 +59,9 @@ export function Footer() {
       </nav>
 
       <div className="space-y-2">
-        <h3 className="text-xl font-medium">Have a question?</h3>
+        <h3 className="text-xl font-medium text-muted-foreground">
+          Have a question?
+        </h3>
 
         <a
           href="mailto:mail@email.com"
@@ -71,7 +73,7 @@ export function Footer() {
         </a>
       </div>
 
-      <ul className="flex flex-col items-start space-y-2 text-muted">
+      <ul className="flex flex-col items-start space-y-2 text-muted-foreground">
         <li className="list-none relative after:absolute after:bottom-0 after:left-0 after:scale-x-0 after:transition-transform hover:after:scale-x-100 after:duration-300 after:origin-left after:bg-current after:w-full after:h-px">
           <address>200 Main St, San Francisco, CA 94103</address>
         </li>
@@ -84,12 +86,12 @@ export function Footer() {
         </li>
 
         <li className="inline-flex gap-4">
-          <div className="relative after:absolute after:bottom-0 after:left-0 after:scale-x-0 after:transition-transform hover:after:scale-x-100 after:duration-300 after:origin-left after:bg-current after:w-full after:h-px">
+          <div className="text-primary relative after:absolute after:bottom-0 after:left-0 after:scale-x-0 after:transition-transform hover:after:scale-x-100 after:duration-300 after:origin-left after:bg-current after:w-full after:h-px">
             <a href="http://" target="_blank" rel="noopener noreferrer">
               Linkedin
             </a>
           </div>
-          <div className="relative after:absolute after:bottom-0 after:left-0 after:scale-x-0 after:transition-transform hover:after:scale-x-100 after:duration-300 after:origin-left after:bg-current after:w-full after:h-px">
+          <div className="text-primary relative after:absolute after:bottom-0 after:left-0 after:scale-x-0 after:transition-transform hover:after:scale-x-100 after:duration-300 after:origin-left after:bg-current after:w-full after:h-px">
             <a href="http://" target="_blank" rel="noopener noreferrer">
               Instagram
             </a>
